@@ -1,0 +1,12 @@
+{% extends "main.html" %} {% block content %} {% for project in projects %}
+<div style="display: flex">
+  <h1><a></a>{{project.title}}</h1>
+  <button>
+    <a href='{% url "update-project" project.id %}'>Edit Project</a>
+  </button>
+  <button>
+    <a href='{% url "delete-project" project.id %}'>Delete Project</a>
+  </button>
+</div>
+
+{% endfor %} {% endblock content %}
